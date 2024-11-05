@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil Price & Economic Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Oil Price & Economic Indicators</h1>
+
+    <h2>Oil Prices</h2>
+    <table id="oil-prices">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Economic Indicators</h2>
+    <table id="economic-indicators">
+        <thead>
+            <tr>
+                <th>Indicator</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Correlation Matrix</h2>
+    <table id="correlation-matrix">
+        <thead>
+            <tr>
+                <th>Indicator 1</th>
+                <th>Indicator 2</th>
+                <th>Correlation</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Events</h2>
+    <table id="events">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Event</th>
+                <th>Price Impact</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        // Fetch and display oil prices
+        fetch('/api/oil-prices')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.querySelector('#oil-prices tbody');
+                data.forEach(row => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td>${new Date(row.Date).toLocaleDateString()}</td><td>${row.Price}</td>`;
+                    tableBody.appendChild(tr);
+                });
+            });
+
+        // Fetch and display economic indicators
+        fetch('/api/economic-indicators')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.querySelector('#economic-indicators tbody');
+                data.forEach(row => {
+                    Object.keys(row).forEach(key => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `<td>${key}</td><td>${row[key]}</td>`;
+                        tableBody.appendChild(tr);
+                    });
+                });
+            });
+
+        // Fetch and display correlation matrix
+        fetch('/api/correlation')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.querySelector('#correlation-matrix tbody');
+                for (let key1 in data) {
+                    for (let key2 in data[key1]) {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `<td>${key1}</td><td>${key2}</td><td>${data[key1][key2]}</td>`;
+                        tableBody.appendChild(tr);
+                    }
+                }
+            });
+
+        // Fetch and display events
+        fetch('/api/events')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.querySelector('#events tbody');
+                data.forEach(event => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td>${new Date(event.date).toLocaleDateString()}</td><td>${event.event}</td><td>${event.price_impact}</td>`;
+                    tableBody.appendChild(tr);
+                });
+            });
+    </script>
+</body>
+</html>
