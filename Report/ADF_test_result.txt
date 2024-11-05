@@ -1,0 +1,3 @@
+ADF Statistic: -1.6086194471231097
+p-value: 0.47926237257573395
+Series is not stationary

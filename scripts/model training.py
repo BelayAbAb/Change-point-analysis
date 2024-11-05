@@ -21,7 +21,7 @@ df.set_index('Date', inplace=True)
 
 # 1. Model Building
 # a. ARIMA Model
-arima_model = ARIMA(df['Price'], order=(5, 1, 0))  # Example order
+arima_model = ARIMA(df['Price'], order=(5, 1, 0))  
 arima_results = arima_model.fit()
 
 # b. GARCH Model

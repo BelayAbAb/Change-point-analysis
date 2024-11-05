@@ -1,0 +1,128 @@
+  Summary of Regression Results   
+==================================
+Model:                         VAR
+Method:                        OLS
+Date:           Tue, 05, Nov, 2024
+Time:                     08:22:21
+--------------------------------------------------------------------
+No. of Equations:         4.00000    BIC:                   -159.986
+Nobs:                     93709.0    HQIC:                  -159.992
+Log likelihood:       6.96468e+06    FPE:                3.27518e-70
+AIC:                     -159.995    Det(Omega_mle):     3.27225e-70
+--------------------------------------------------------------------
+Results for equation Price
+====================================================================================
+                       coefficient       std. error           t-stat            prob
+------------------------------------------------------------------------------------
+const                     0.000016      5549.748501            0.000           1.000
+L1.Price                  0.999978         0.003267          306.078           0.000
+L1.GDP                   -0.000000              NAN              NAN             NAN
+L1.Inflation Rate         0.000012              NAN              NAN             NAN
+L1.Jobless Rate          -0.000176              NAN              NAN             NAN
+L2.Price                  0.000000         0.004620            0.000           1.000
+L2.GDP                   -0.000000              NAN              NAN             NAN
+L2.Inflation Rate         0.000301              NAN              NAN             NAN
+L2.Jobless Rate          -0.000155              NAN              NAN             NAN
+L3.Price                 -0.000000         0.004620           -0.000           1.000
+L3.GDP                    0.000000              NAN              NAN             NAN
+L3.Inflation Rate        -0.000053              NAN              NAN             NAN
+L3.Jobless Rate           0.000203              NAN              NAN             NAN
+L4.Price                  0.000000         0.004620            0.000           1.000
+L4.GDP                    0.000000              NAN              NAN             NAN
+L4.Inflation Rate         0.000383              NAN              NAN             NAN
+L4.Jobless Rate           0.000053              NAN              NAN             NAN
+L5.Price                 -0.000018         0.003267           -0.006           0.996
+L5.GDP                   -0.000000              NAN              NAN             NAN
+L5.Inflation Rate         0.000057              NAN              NAN             NAN
+L5.Jobless Rate           0.000122              NAN              NAN             NAN
+====================================================================================
+
+Results for equation GDP
+====================================================================================
+                       coefficient       std. error           t-stat            prob
+------------------------------------------------------------------------------------
+const                    52.232068         0.000019      2713095.810           0.000
+L1.Price                  0.000000         0.000000           95.368           0.000
+L1.GDP                    0.531960              NAN              NAN             NAN
+L1.Inflation Rate      -118.215236              NAN              NAN             NAN
+L1.Jobless Rate       -1649.690006              NAN              NAN             NAN
+L2.Price                 -0.000000         0.000000          -67.450           0.000
+L2.GDP                   -0.331666              NAN              NAN             NAN
+L2.Inflation Rate      1709.649422              NAN              NAN             NAN
+L2.Jobless Rate       -1175.257346              NAN              NAN             NAN
+L3.Price                 -0.000000         0.000000           -0.094           0.925
+L3.GDP                   -0.020609              NAN              NAN             NAN
+L3.Inflation Rate      -654.695443              NAN              NAN             NAN
+L3.Jobless Rate        1147.538878              NAN              NAN             NAN
+L4.Price                 -0.000000         0.000000           -0.450           0.653
+L4.GDP                    0.267111              NAN              NAN             NAN
+L4.Inflation Rate      2260.680215              NAN              NAN             NAN
+L4.Jobless Rate          12.460647              NAN              NAN             NAN
+L5.Price                 -0.000000         0.000000           -0.497           0.620
+L5.GDP                   -0.140372              NAN              NAN             NAN
+L5.Inflation Rate       405.022366              NAN              NAN             NAN
+L5.Jobless Rate         557.790877              NAN              NAN             NAN
+====================================================================================
+
+Results for equation Inflation Rate
+====================================================================================
+                       coefficient       std. error           t-stat            prob
+------------------------------------------------------------------------------------
+const                     0.025145         0.000000      3787744.428           0.000
+L1.Price                  0.000000         0.000000          130.501           0.000
+L1.GDP                    0.000227              NAN              NAN             NAN
+L1.Inflation Rate        -0.262157              NAN              NAN             NAN
+L1.Jobless Rate          -0.378269              NAN              NAN             NAN
+L2.Price                 -0.000000         0.000000          -92.134           0.000
+L2.GDP                    0.000294              NAN              NAN             NAN
+L2.Inflation Rate        -0.135282              NAN              NAN             NAN
+L2.Jobless Rate           0.494657              NAN              NAN             NAN
+L3.Price                  0.000000         0.000000            0.036           0.971
+L3.GDP                   -0.000080              NAN              NAN             NAN
+L3.Inflation Rate        -0.517039              NAN              NAN             NAN
+L3.Jobless Rate           1.285928              NAN              NAN             NAN
+L4.Price                 -0.000000         0.000000           -0.789           0.430
+L4.GDP                   -0.000175              NAN              NAN             NAN
+L4.Inflation Rate        -0.814968              NAN              NAN             NAN
+L4.Jobless Rate           0.811912              NAN              NAN             NAN
+L5.Price                 -0.000000         0.000000           -0.488           0.626
+L5.GDP                   -0.000008              NAN              NAN             NAN
+L5.Inflation Rate        -0.552248              NAN              NAN             NAN
+L5.Jobless Rate          -0.723158              NAN              NAN             NAN
+====================================================================================
+
+Results for equation Jobless Rate
+====================================================================================
+                       coefficient       std. error           t-stat            prob
+------------------------------------------------------------------------------------
+const                     0.029801         0.000000      3393240.869           0.000
+L1.Price                 -0.000000         0.000000          -19.305           0.000
+L1.GDP                   -0.000023              NAN              NAN             NAN
+L1.Inflation Rate        -0.263440              NAN              NAN             NAN
+L1.Jobless Rate          -0.117813              NAN              NAN             NAN
+L2.Price                  0.000000         0.000000           13.363           0.000
+L2.GDP                   -0.000168              NAN              NAN             NAN
+L2.Inflation Rate        -0.075740              NAN              NAN             NAN
+L2.Jobless Rate           0.203793              NAN              NAN             NAN
+L3.Price                  0.000000         0.000000            0.499           0.618
+L3.GDP                    0.000006              NAN              NAN             NAN
+L3.Inflation Rate         0.186042              NAN              NAN             NAN
+L3.Jobless Rate           0.036349              NAN              NAN             NAN
+L4.Price                 -0.000000         0.000000           -0.621           0.534
+L4.GDP                   -0.000005              NAN              NAN             NAN
+L4.Inflation Rate         0.824581              NAN              NAN             NAN
+L4.Jobless Rate          -0.204230              NAN              NAN             NAN
+L5.Price                 -0.000000         0.000000           -0.067           0.947
+L5.GDP                    0.000211              NAN              NAN             NAN
+L5.Inflation Rate         0.512284              NAN              NAN             NAN
+L5.Jobless Rate           0.385728              NAN              NAN             NAN
+====================================================================================
+
+Correlation matrix of residuals
+                     Price       GDP  Inflation Rate  Jobless Rate
+Price             1.000000 -0.000000       -0.000004      0.000006
+GDP              -0.000000  1.000000        0.905936      0.502807
+Inflation Rate   -0.000004  0.905936        1.000000      0.505346
+Jobless Rate      0.000006  0.502807        0.505346      1.000000
+
+
